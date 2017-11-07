@@ -30,6 +30,7 @@ enum hwdec_type {
     HWDEC_NVDEC_COPY,
     HWDEC_CRYSTALHD,
     HWDEC_RKMPP,
+    HWDEC_V4L2,
 };
 
 #define HWDEC_IS_AUTO(x) ((x) == HWDEC_AUTO || (x) == HWDEC_AUTO_COPY)

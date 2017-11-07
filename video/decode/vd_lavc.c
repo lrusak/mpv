@@ -149,6 +149,12 @@ static const struct vd_lavc_hwdec mp_vd_lavc_rkmpp = {
     .image_format = IMGFMT_DRMPRIME,
 };
 
+static const struct vd_lavc_hwdec mp_vd_lavc_v4l2 = {
+    .type = HWDEC_V4L2,
+    .lavc_suffix = "_v4l2",
+    .image_format = IMGFMT_DRMPRIME,
+};
+
 #if HAVE_CUDA_HWACCEL
 static const struct vd_lavc_hwdec mp_vd_lavc_nvdec = {
     .type = HWDEC_NVDEC,
@@ -281,6 +287,7 @@ static const struct vd_lavc_hwdec *const hwdec_list[] = {
 #endif
     &mp_vd_lavc_crystalhd,
     &mp_vd_lavc_rkmpp,
+    &mp_vd_lavc_v4l2,
     NULL
 };
 
